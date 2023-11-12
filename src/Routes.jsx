@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
 import Config from './pages/config';
 import FiltrarEvento from './pages/FiltrarEvento';
-import DescubraEvento from './pages/FiltrarEvento';
+import DescubraEvento from './pages/DescubraEvento';
 import Competencias from './pages/Competencias';
 import Nivelamento from './pages/Nivelamento';
 

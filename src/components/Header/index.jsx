@@ -16,10 +16,10 @@ function Header() {
 
                         <div className="search-box">
                             <a href="#" className="search-btn">
-                                <img src="/loupe.png" alt="lupa" height="20" width="20" />
+                                <img src="./public/loupe.png" alt="lupa" height="20" width="20" />
                             </a>
                             <input type="text" className="search-text" placeholder="Pesquisar..." />
-                            <img src="/mdi_arrow-down-drop.png" />
+                            <img src="public/mdi_arrow-down-drop.png" />
                         </div>
                     </div>
 

@@ -56,7 +56,7 @@ export const AreaHeader = styled.div`
 
         
         .nav-items-btn-user-img {
-           width: 100%;
+           width: 30%;
            height: 100%;
            display: flex;
            justify-content: space-between;

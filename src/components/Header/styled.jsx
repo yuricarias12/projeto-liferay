@@ -136,7 +136,6 @@ export const AreaHeader = styled.div`
             }
 
             .nav-items-btn-user-img {
-                border: 2px solid red;
                 max-width: 95%;
                 padding-left: 5px;
                    

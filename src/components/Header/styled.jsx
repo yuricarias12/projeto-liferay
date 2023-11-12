@@ -12,6 +12,8 @@ export const AreaHeader = styled.div`
         }
         
         .nav-bar {
+            border: 2px solid red;
+            width: 425px;
             background-color: #0B63CE;
             height: 65px;
             display: flex;
@@ -123,6 +125,33 @@ export const AreaHeader = styled.div`
 
             .nav-items-btn-user-img {
                 
+                align-items: center;
+            }
+
+            .search-text {
+                
+                width: 300px;
+               
+            }
+        }
+
+        @media only screen and (max-width: 400px) {
+
+            .nav-bar {
+                border: 2 px solid red;
+                padding: 0;
+                height: 150px;
+                display: grid;
+                
+            }
+
+            .search-box {
+                
+                width: 80%;
+            }
+
+            .nav-items-btn-user-img {
+                width: 94%;
                 align-items: center;
             }
 

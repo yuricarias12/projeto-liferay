@@ -325,6 +325,19 @@ input[type="checkbox"]:checked + label img {
 /* FIM CSS PÁGINA DE FILTRAR EVENTOS */
 
 
+@media only screen and (max-width: 400px) {
+
+ .areas {
+  border: 2px solid red;
+ }
+
+ .container {
+  border: 2px solid black;
+  width: 55%;
+ }
+}
+
+
 
 
 

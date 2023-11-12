@@ -3,10 +3,11 @@ import styled from "styled-components";
 
 export const AreaFooter = styled.div`
 
-
-    background-color: #0d2d67;
-    margin-top: 30px;
-    width: 100%;
+    .footer-area {
+        background-color: #0d2d67;
+        margin-top: 30px;
+        width: 100%;
+    }
     
 
 
@@ -136,6 +137,14 @@ export const AreaFooter = styled.div`
         margin-top: 30px;
     }
 }
+
+@media only screen and (max-width: 400px) {
+
+    .footer-area {
+        
+        width: 425px;
+        
+    }
 
 
 

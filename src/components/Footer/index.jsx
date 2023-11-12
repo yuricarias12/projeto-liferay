@@ -6,7 +6,7 @@ function Footer() {
 
     return(
         <AreaFooter>
-
+<div className="footer-area">
 <div className="footer-info">
 
 <div className="current-language">
@@ -78,6 +78,7 @@ function Footer() {
 <p>Powered by Liferay</p>
 <p>© 2023 Liferay Inc. Todos os Direitos Reservados</p>
 <a href="https://www.liferay.com/pt/privacy-policy">Política de Privacidade</a>
+</div>
 </div>
         
         </AreaFooter>

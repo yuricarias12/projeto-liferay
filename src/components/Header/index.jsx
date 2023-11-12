@@ -24,13 +24,9 @@ function Header() {
                     </div>
 
                     <div className="nav-items-btn-user-img">
-                        
-                        <ul className="nav-list">
-                            <li className="nav-item"><Link to="/DescubraEvento" className="nav-link">Descubra um Evento</Link></li>
-                            <li className="nav-item"><Link to="/CriarEvento" className="nav-link">Criar um Evento</Link></li>
-                        </ul>
-
-                        <div className="user-img">
+                        <a className="nav-item"><Link to="/DescubraEvento" className="nav-link">Descubra um Evento</Link></a>
+                        <a className="nav-item"><Link to="/CriarEvento" className="nav-link">Criar um Evento</Link></a>
+                    <div className="user-img">
                             <a href="#" className="profile-img">
                                 <img src="../../../user-img.png" />
                             </a>

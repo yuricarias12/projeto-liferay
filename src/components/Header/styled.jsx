@@ -56,7 +56,7 @@ export const AreaHeader = styled.div`
 
         
         .nav-items-btn-user-img {
-           width: 30%;
+           width: 100%;
            height: 100%;
            display: flex;
            justify-content: space-between;
@@ -64,12 +64,7 @@ export const AreaHeader = styled.div`
               
         }
 
-        .nav-list {
-            display: flex;
-            margin-top: 15px;
-            gap: 50px;
 
-        }
 
         .nav-link {
             text-decoration: none;
@@ -78,7 +73,7 @@ export const AreaHeader = styled.div`
             color: #FFF;
         }
 
-        .nav-list a:hover{
+        a:hover{
             opacity: 0.7;
         }
 
@@ -112,8 +107,8 @@ export const AreaHeader = styled.div`
                 padding: 0;
                 height: 150px;
                 display: grid;
-                
             }
+
 
             .logo-img-search-box {
                 display: flex;
@@ -121,10 +116,6 @@ export const AreaHeader = styled.div`
     
             }
 
-            .nav-items-btn-user-img {
-                
-                align-items: center;
-            }
 
             .search-text {
                 
@@ -143,6 +134,13 @@ export const AreaHeader = styled.div`
                 display: grid;
                 
             }
+
+            .nav-items-btn-user-img {
+                border: 2px solid red;
+                max-width: 95%;
+                padding-left: 5px;
+                   
+             }
 
             .search-box {
                     

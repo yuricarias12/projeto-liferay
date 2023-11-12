@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/projeto-liferay/static/css/main.ac7f9302.css",
+    "main.js": "/projeto-liferay/static/js/main.dfbaef0b.js",
+    "index.html": "/projeto-liferay/index.html",
+    "main.ac7f9302.css.map": "/projeto-liferay/static/css/main.ac7f9302.css.map",
+    "main.dfbaef0b.js.map": "/projeto-liferay/static/js/main.dfbaef0b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ac7f9302.css",
+    "static/js/main.dfbaef0b.js"
+  ]
+}

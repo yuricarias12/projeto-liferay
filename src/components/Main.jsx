@@ -8,7 +8,7 @@ text-align: center;
 /* INICIO CSS PÁGINA ÁREA DE INTERESSES */
 
 .wc-text {
-    
+  
   margin-top: 35px;
 }
 
@@ -326,10 +326,6 @@ input[type="checkbox"]:checked + label img {
 
 
 @media only screen and (max-width: 400px) {
-
- .areas {
-  border: 2px solid red;
- }
 
  .container {
   

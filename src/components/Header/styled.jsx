@@ -136,7 +136,8 @@ export const AreaHeader = styled.div`
         @media only screen and (max-width: 400px) {
 
             .nav-bar {
-                width: 425px;
+                
+                width: 405px;
                 padding: 0;
                 height: 150px;
                 display: grid;
@@ -144,7 +145,7 @@ export const AreaHeader = styled.div`
             }
 
             .search-box {
-                
+                    
                 width: 80%;
             }
 
@@ -153,6 +154,7 @@ export const AreaHeader = styled.div`
                 align-items: center;
             }
 
+            
             .search-text {
                 
                 width: 300px;

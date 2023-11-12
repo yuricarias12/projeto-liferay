@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "residencia-ptdigital-liferay"
-  }
+    "default": "projeto-liferay-5e52c",
+    "PrimeiroAcesso": "projeto-liferay-5e52c"
+  },
+  "targets": {},
+  "etags": {}
 }

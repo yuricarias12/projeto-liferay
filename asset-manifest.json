@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/projeto-liferay/static/css/main.ac7f9302.css",
-    "main.js": "/projeto-liferay/static/js/main.bc544d5a.js",
+    "main.js": "/projeto-liferay/static/js/main.020b1ad1.js",
     "index.html": "/projeto-liferay/index.html",
     "main.ac7f9302.css.map": "/projeto-liferay/static/css/main.ac7f9302.css.map",
-    "main.bc544d5a.js.map": "/projeto-liferay/static/js/main.bc544d5a.js.map"
+    "main.020b1ad1.js.map": "/projeto-liferay/static/js/main.020b1ad1.js.map"
   },
   "entrypoints": [
     "static/css/main.ac7f9302.css",
-    "static/js/main.bc544d5a.js"
+    "static/js/main.020b1ad1.js"
   ]
 }

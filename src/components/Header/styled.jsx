@@ -12,8 +12,6 @@ export const AreaHeader = styled.div`
         }
         
         .nav-bar {
-            border: 2px solid red;
-            width: 425px;
             background-color: #0B63CE;
             height: 65px;
             display: flex;
@@ -139,6 +137,7 @@ export const AreaHeader = styled.div`
 
             .nav-bar {
                 border: 2 px solid red;
+                width: 425px;
                 padding: 0;
                 height: 150px;
                 display: grid;

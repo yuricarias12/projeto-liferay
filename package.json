@@ -2,7 +2,7 @@
   "name": "telaprimeiroacesso",
   "homepage": "https://yuricarias12.github.io/projeto-liferay/",
   "version": "0.1.0",
-  "private": false,
+  "private": true,
   "dependencies": {
     "@react-native-community/masked-view": "^0.1.11",
     "@react-navigation/native": "^6.1.8",

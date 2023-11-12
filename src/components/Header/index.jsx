@@ -11,15 +11,15 @@ function Header() {
 
                     <div className="logo-img-search-box">
                         <a href="https://www.liferay.com/pt/" className="liferay-img">
-                            <img src="/liferay.png" />
+                            <img src="../../../liferay.png" />
                         </a>
 
                         <div className="search-box">
                             <a href="#" className="search-btn">
-                                <img src="./public/loupe.png" alt="lupa" height="20" width="20" />
+                                <img src="../../../loupe.png" alt="lupa" height="20" width="20" />
                             </a>
                             <input type="text" className="search-text" placeholder="Pesquisar..." />
-                            <img src="public/mdi_arrow-down-drop.png" />
+                            <img src="../../../mdi_arrow-down-drop.png" />
                         </div>
                     </div>
 
@@ -32,7 +32,7 @@ function Header() {
 
                         <div className="user-img">
                             <a href="#" className="profile-img">
-                                <img src="/user-img.png" />
+                                <img src="../../../user-img.png" />
                             </a>
                         </div>
                     </div>

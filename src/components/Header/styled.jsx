@@ -137,7 +137,7 @@ export const AreaHeader = styled.div`
 
             .nav-bar {
                 
-                width: 405px;
+                width: 425px;
                 padding: 0;
                 height: 150px;
                 display: grid;

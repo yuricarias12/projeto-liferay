@@ -8,7 +8,7 @@ text-align: center;
 /* INICIO CSS PÁGINA ÁREA DE INTERESSES */
 
 .wc-text {
-  
+  text-align: center;
   margin-top: 35px;
 }
 

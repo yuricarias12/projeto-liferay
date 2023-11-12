@@ -9,8 +9,8 @@ const Page = () => {
         <ContainerPage>
 
             <TittlePage>
-                    <div className="wc-text">Seja Bem-vindo(a) à plataforma de eventos da empresa. Aqui, você vai
-                    encontrar inúmeros eventos para participar,<br />dentre eles estão palestras, mentorias, workshops, etc.
+                    <div className="wc-text">Seja Bem-vindo(a) à plataforma de eventos da empresa. <br />Aqui, você vai
+                    encontrar inúmeros eventos para participar,<br />dentre eles estão palestras, mentorias, workshops, etc.<br />
                     <strong>Nos informe quais as suas principais áreas de interesse:</strong></div>                 
             </TittlePage>
 

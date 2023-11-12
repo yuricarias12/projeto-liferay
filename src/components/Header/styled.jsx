@@ -150,7 +150,7 @@ export const AreaHeader = styled.div`
             }
 
             .nav-items-btn-user-img {
-                width: 94%;
+                width: 100%;
                 align-items: center;
             }
 

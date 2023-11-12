@@ -11,7 +11,7 @@ function Header() {
 
                     <div className="logo-img-search-box">
                         <a href="https://www.liferay.com/pt/" className="liferay-img">
-                            <img src="../../../liferay.png" />
+                            <img src="/liferay.png" />
                         </a>
 
                         <div className="search-box">

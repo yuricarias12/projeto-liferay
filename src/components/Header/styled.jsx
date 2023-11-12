@@ -136,7 +136,6 @@ export const AreaHeader = styled.div`
         @media only screen and (max-width: 400px) {
 
             .nav-bar {
-                border: 2 px solid red;
                 width: 425px;
                 padding: 0;
                 height: 150px;

@@ -332,7 +332,7 @@ input[type="checkbox"]:checked + label img {
  }
 
  .container {
-  border: 2px solid black;
+  
   width: 55%;
  }
 }

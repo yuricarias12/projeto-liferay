@@ -141,6 +141,11 @@ export const AreaHeader = styled.div`
                    
              }
 
+             .user-img {
+                border: 2px solid red;
+                margin-right: 10px;
+             }
+
             .search-box {
                     
                 width: 80%;

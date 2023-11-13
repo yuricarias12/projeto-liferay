@@ -253,15 +253,6 @@ input[type="checkbox"]:checked + label img {
 }
 
 
-
-
-
-
-
-
-
-
-
 .card {
   width: 190px;
   background: white;
@@ -318,13 +309,72 @@ input[type="checkbox"]:checked + label img {
 }
 
 
-
-
-
-
-
-
 /* FIM CSS PÁGINA DE FILTRAR EVENTOS */
+
+
+/* INICIO CSS PÁGINA DE CONFIGURAÇÕES */
+
+.body-page {
+  text-align: left;
+  margin-left: 20px;
+}
+
+
+.tittle-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-div {
+  margin-top: 10px;
+}
+
+.config-areas-interesse {
+  
+  display: flex;
+  gap: 25px;
+}
+
+.buttons-pg-config {
+  border-radius: 16px;
+  color: #FFF;
+  background: #0B63CE;
+  border: 1px solid #0B63CE;
+  margin-top: 20px;
+}
+
+.config-competencias {
+  margin-top: 20px;
+  display: flex;
+  gap: 25px;
+}
+
+.competencias-text {
+  margin-top: 10px;
+}
+
+label img {
+  filter: grayscale(100%);
+}
+
+
+
+.competencias-config {
+  width: 150px;
+  height: 150px;
+  box-shadow: 0px 2px 8px 0px rgba(99, 99, 99, 0.2);
+  border-radius: 16px;
+}
+
+.img-competencias-config {
+  width: 150px;
+  height: 150px;
+}
+
+
+
+/* FIM CSS PÁGINA DE CONFIGURAÇÕES */
 
 
 @media only screen and (max-width: 400px) {

@@ -16,7 +16,7 @@ const Page = () => {
             </div>
 
             <section className="body-page">
-                <h3>Meus Interesses:</h3>
+                <h3>Áreas do meu Interesse:</h3>
                 <div className="config-areas-interesse">
                     <div className="form-element">
                         <input type="checkbox" name="interest-area" value="Back-End" id="back-end" checked />

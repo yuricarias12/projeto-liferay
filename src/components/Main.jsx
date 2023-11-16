@@ -377,16 +377,139 @@ label img {
 /* FIM CSS PÁGINA DE CONFIGURAÇÕES */
 
 
-@media only screen and (max-width: 400px) {
 
- .container {
+/* INICIO CSS PÁGINA DE CONQUISTAS */
 
-  width: 55%;
+.tittle-page-conquista {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+.text-h2 {
+  float: left;
+  margin-left: 20px;
+  margin-top: 50px;
+}
+
+.certificados-usuario {
+  width: 95%;
+  margin-left: 20px;
+  margin-top: 100px;
+  
+}
+
+.acoes {
+  display: flex;
+  justify-content: flex-end;
+  gap: 35px;
+  
+}
+
+.acoes-evento {
+  text-decoration: underline;
+  color: #0B63CE;
+
+}
+
+.nome-certificado {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  padding-left: 5px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  
+}
+
+.acoes-usuario {
+  width: 20%;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 25px;
+  margin-top: 15px;
+  height: 16px;
+  gap: 96px;
+  
+  
+}
+
+.btn-imgs {
+  cursor: pointer;
+}
+
+/* FIM CSS PÁGINA DE CONQUISTAS */
+
+
+
+
+@media only screen and (max-width: 600px) {
+
+  .container {
+    width: 55%;
  }
 
  .wc-text {
-  margin-left: 10px;
+   margin-left: 10px;
  }
+
+ .acoes-usuario {
+  width: 20%;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 10px;
+  margin-top: 5px;
+  height: 16px;
+  gap: 30px;
+}
+
+.acoes {
+  display: none;
+}
+}
+
+
+
+@media only screen and (max-width: 400px) {
+
+  .container {
+    width: 55%;
+ }
+
+ .wc-text {
+   margin-left: 10px;
+ }
+
+ .acoes-usuario {
+  width: 20%;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 0px;
+  margin-top: 10px;
+  height: 16px;
+  gap: 15px;
+}
+
+.acoes {
+  display: none;
+}
+
+.nome-certificado {
+
+  padding-left: 0px;
+  display: flex;
+}
+
+.certificados-usuario {
+
+  margin-left: 5px;
+}
+
+.certificados {
+  margin-top: 4px;
+    text-align: center;
+
+}
 }
 
 

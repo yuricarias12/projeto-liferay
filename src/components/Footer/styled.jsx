@@ -145,6 +145,7 @@ export const AreaFooter = styled.div`
         width: 425px;
         
     }
+}
 
 
 

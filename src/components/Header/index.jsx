@@ -19,7 +19,7 @@ function Header() {
                                 <img src="../../../loupe.png" alt="lupa" height="20" width="20" />
                             </a>
                             <input type="text" className="search-text" placeholder="Pesquisar..." />
-                            <img src="../../../mdi_arrow-down-drop.png" />
+                            <img src="../../../mdi_arrow-down-drop.png" alt="arrow-down-drop"/>
                         </div>
                     </div>
 

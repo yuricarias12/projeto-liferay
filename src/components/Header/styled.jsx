@@ -73,11 +73,10 @@ export const AreaHeader = styled.div`
             color: #FFF;
         }
 
-        a:hover{
+        .nav-link:hover {
             opacity: 0.7;
         }
-
-        
+ 
     
         @media only screen and (max-width: 971px) {
 
@@ -163,11 +162,4 @@ export const AreaHeader = styled.div`
                
             }
         }
-
-    
-        
-           
-
-
-
 `;

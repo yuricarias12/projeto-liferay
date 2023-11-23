@@ -381,10 +381,8 @@ label img {
 /* INICIO CSS PÁGINA DE CONQUISTAS */
 
 .tittle-page-conquista {
-  display: flex;
-  align-items: center;
-  margin-left: 20px;
-  margin-top: 20px;
+ 
+  
 }
 
 .text-h2 {

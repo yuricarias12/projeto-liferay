@@ -1,9 +1,19 @@
-import React from "react";
+import {useState} from 'react';
 import { Link } from 'react-router-dom';
 
 import { ContainerPage, TittlePage } from "../../components/Main";
 
 const Page = () => {
+
+    const [isChecked, setIsChecked] = useState(false);
+
+    const handleChange = () => {
+        const checkboxes = document.querySelectorAll('input[name="interest-area"]');
+        const verificaCheckboxMarcado = Array.from(checkboxes).some(checkbox => checkbox.checked);
+        setIsChecked(verificaCheckboxMarcado);
+        console.log('Checkbox is checked:', verificaCheckboxMarcado);
+      };
+  
     return (
 
         <ContainerPage>
@@ -11,7 +21,7 @@ const Page = () => {
             <TittlePage>
                     <div className="wc-text">Seja Bem-vindo(a) à plataforma de eventos da empresa. <br />Aqui, você vai
                     encontrar inúmeros eventos para participar,<br />dentre eles estão palestras, mentorias, workshops, etc.<br />
-                    <strong>Nos informe quais as suas principais áreas de interesse:</strong></div>                 
+                    <strong>Selecione ao menos uma área de interesse para avançar:</strong></div>                 
             </TittlePage>
 
 
@@ -21,7 +31,7 @@ const Page = () => {
                 <div className="container">
                     <div className="list">
                         <div className="form-element">
-                            <input type="checkbox" name="interest-area" value="Back-End" id="back-end" />
+                            <input type="checkbox" name="interest-area" value="Back-End" id="back-end" onChange={handleChange} />
                             <label htmlFor="back-end">
                                 <img className="img-icon" src="../../../backend.png" alt="Back-End" />
                                 <div className="title">
@@ -30,7 +40,7 @@ const Page = () => {
                             </label>
                         </div>
                         <div className="form-element">
-                            <input type="checkbox" name="interest-area" value="Front-End" id="front-end" />
+                            <input type="checkbox" name="interest-area" value="Front-End" id="front-end" onChange={handleChange} />
                             <label htmlFor="front-end">
                                 <img className="img-icon" src="../../../frontend.png" alt="Front-End" />
                                 <div className="title">
@@ -39,7 +49,7 @@ const Page = () => {
                             </label>
                         </div>
                         <div className="form-element">
-                            <input type="checkbox" name="interest-area" value="Quality-Assurance" id="quality-assurance" />
+                            <input type="checkbox" name="interest-area" value="Quality-Assurance" id="quality-assurance" onChange={handleChange}  />
                             <label htmlFor="quality-assurance">
                                 <img className="img-icon" src="../../../qualityassurance.png" alt="Quality-Assurance" />
                                 <div className="title">
@@ -48,7 +58,7 @@ const Page = () => {
                             </label>
                         </div>
                         <div className="form-element">
-                            <input type="checkbox" name="interest-area" value="Project-Management" id="project-management" />
+                            <input type="checkbox" name="interest-area" value="Project-Management" id="project-management" onChange={handleChange} />
                             <label htmlFor="project-management">
                                 <img className="img-icon" src="../../../projectmanagement.png" alt="Project Management" />
                                 <div className="title">
@@ -57,7 +67,7 @@ const Page = () => {
                             </label>
                         </div>
                         <div className="form-element">
-                            <input type="checkbox" name="interest-area" value="Common-Skills" id="common-skills" />
+                            <input type="checkbox" name="interest-area" value="Common-Skills" id="common-skills" onChange={handleChange} />
                             <label htmlFor="common-skills">
                                 <img className="img-icon" src="../../../commonskills.png" alt="Common Skills" />
                                 <div className="title">
@@ -66,7 +76,7 @@ const Page = () => {
                             </label>
                         </div>
                         <div className="form-element">
-                            <input type="checkbox" name="interest-area" value="Others" id="others" />
+                            <input type="checkbox" name="interest-area" value="Others" id="others" onChange={handleChange} />
                             <label htmlFor="others">
                                 <img className="img-icon" src="../../../others.png" alt="Others" />
                                 <div className="title">
@@ -79,7 +89,7 @@ const Page = () => {
             </section>
             <div className="actions">
                
-                <Link to="/Competencias"> <button type="submit" className="buttons" id="btnNext">Avançar<img src="../../../setadireita.png" /></button></Link>
+                <Link to="/Competencias"> <button disabled={!isChecked} type="submit" className="buttons" id="btnNext">Avançar<img src="../../../setadireita.png" alt="seta-direita" /></button></Link>
             </div>
         </form>
     </main>

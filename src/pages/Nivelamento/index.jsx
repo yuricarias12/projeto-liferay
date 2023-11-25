@@ -24,19 +24,6 @@ const Nivelamento = () => {
 
     setFinalizarClicado(true);
 
-    // Formata as competências para o formato desejado
-    const competenciasFormatadas = competencias.map(({ valor, imagem }) => ({
-      valor,
-      imagem,
-    }));
-
-    // Cria um objeto com os dados do formulário para alerta
-    const dadosFormulario = {
-      competencias: competenciasFormatadas,
-      niveis: nivelSelecionado,
-    };
-    // Exibe um alerta com os dados formatados
-    alert(JSON.stringify(dadosFormulario, null, 2));
   };
 
   

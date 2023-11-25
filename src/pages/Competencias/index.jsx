@@ -29,9 +29,10 @@ const programmingLanguages = [
 ];
 
 const Page = () => {
-  // Armazena competências escolhidas
+  
   const [competencias, setCompetencias] = useState([]);
   const [selectedOptions, setSelectedOptions] = useState([]);
+  const [estaSelecionado, setSelecionado] = useState(false);
   const navigate = useNavigate();
 
   const adicionarCompetencias = (selectedOptions) => {
@@ -44,24 +45,26 @@ const Page = () => {
     });
 
     setCompetencias(novasCompetencias);
+    setSelecionado(novasCompetencias.length > 0); // Define como true se houver pelo menos uma competência
   };
 
   const removerCompetencia = (competencia) => {
     const novasCompetencias = competencias.filter(comp => comp.valor !== competencia.valor);
     setCompetencias(novasCompetencias);
 
-    // Atualiza as opções selecionadas no Select
     const novasOpcoesSelecionadas = selectedOptions.filter(option => option.label !== competencia.valor);
     setSelectedOptions(novasOpcoesSelecionadas);
+
+    setSelecionado(novasCompetencias.length > 0); // Define como true se houver pelo menos uma competência
   };
 
   return (
     <ContainerPage>
-
       <TittlePage>
-        <div className="wc-text"><p>Agora escolha <strong>5 competências</strong> técnicas que você possui.<br />
-          Ah! Não se preocupe, depois você poderá adicionar mais competências ao seu perfil ou removê-las na área de configurações.
-        </p>
+        <div className="wc-text">
+          <p>Agora escolha ao menos <strong>uma competência</strong> técnica que você possui para avançar.<br />
+          Ah! Não se preocupe, depois você poderá adicionar mais competências ao seu perfil <br /> ou removê-las na área de configurações.
+          </p>
         </div>
       </TittlePage>
 
@@ -74,7 +77,7 @@ const Page = () => {
                 isMulti
                 options={programmingLanguages}
                 placeholder="Digite ou selecione as tecnologias..."
-                value={selectedOptions} // Define as opções selecionadas
+                value={selectedOptions}
                 onChange={(selectedOptions) => {
                   adicionarCompetencias(selectedOptions);
                 }}
@@ -112,34 +115,27 @@ const Page = () => {
                       alt={`Imagem de ${competencia.valor}`}
                       style={{ width: '150px', height: '150px', display: 'block', margin: '10px auto' }}
                     />
-                    {/*
-                    <button
-                      type="button"
-                      onClick={() => removerCompetencia(competencia)}
-                      style={{
-                        position: 'absolute',
-                        top: 0,
-                        right: 0,
-                        border: 'none',
-                        background: 'none',
-                        cursor: 'pointer',
-                      }}
-                    >
-                      <img src="../../../../multiplesign.png" alt="Remover" style={{ width: '15px', height: '15px' }} />
-                    </button> */}
                   </li>
                 </div>
               ))}
             </ul>
           </div>
 
-          <div className="box-btn-add">
-            {/* Botão de adicionar competências removido */}
-          </div>
-
+          {/* Botões de ação */}
           <div className="actions">
-            <Link to="/"> <button type="button" className="buttons" id="btnBack"><img src="../../../setaesquerda.png" alt="Seta" />Voltar</button></Link>
-            <button type="submit" className="buttons" id="btnNext" onClick={() => navigate('/Nivelamento', { state: { competencias } })}>
+            <Link to="/"> 
+              <button type="button" className="buttons" id="btnBack">
+                <img src="../../../setaesquerda.png" alt="Seta" />Voltar
+              </button>
+            </Link>
+
+            <button 
+              type="button" 
+              className="buttons" 
+              id="btnNext" 
+              disabled={!estaSelecionado}
+              onClick={() => navigate('/Nivelamento', { state: { competencias } })}
+            >
               Avançar<img src="../../../setadireita.png" alt="Seta" />
             </button>
           </div>
@@ -147,9 +143,8 @@ const Page = () => {
       </main>
     </ContainerPage>
   );
-}
+};
 
-// Função para obter o caminho da imagem com base na competência
 const obterCaminhoImagem = (competencia) => {
   const imagensFundo = {
     Java: '../../../../javaimg.png',
@@ -161,6 +156,17 @@ const obterCaminhoImagem = (competencia) => {
     "C++": '../../../../c++img.png',
     "C#": '../../../../csharpimg.png',
     Ruby: '../../../../rubyimg.png',
+    Swift: '../../../../Swift.png',
+    PHP: '../../../../php.png',
+    Kotlin: '../../../../kotlin.png',
+    Go: '../../../../golang.png',
+    Rust: '../../../../rust.png',
+    Perl: '../../../../perl.png',
+    Scala: '../../../../scala.png',
+    Haskell: '../../../../haskell.png',
+    Lua: '../../../../lua.png',
+    "Objective-C": '../../../../objectivec.jpg',
+    Matlab: '../../../../matlab.png',
   };
 
   return `/img/${imagensFundo[competencia] || 'default-background.jpg'}`;

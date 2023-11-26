@@ -24,6 +24,16 @@ const Nivelamento = () => {
 
     setFinalizarClicado(true);
 
+    const todosNiveisSelecionados = true; // Substitua com sua lógica de verificação
+
+    if (todosNiveisSelecionados) {
+      // Redireciona para a página HTML usando um caminho relativo
+      window.location.href = './pages/Telainicial.html';
+    } else {
+      // Exibe uma mensagem ou lógica para lidar com o caso em que nem todos os níveis foram selecionados
+      console.error('Por favor, selecione o nível para todas as competências.');
+    }
+
   };
 
   

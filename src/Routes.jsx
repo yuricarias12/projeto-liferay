@@ -7,11 +7,13 @@ import Conquistas from './pages/Conquistas';
 import DescubraEvento from './pages/DescubraEvento';
 import Competencias from './pages/Competencias';
 import Nivelamento from './pages/Nivelamento';
+import TelaInicial from './pages/TelaInicial';
 
 const App = () => {
     return (
         <Routes>
             <Route path="/" element={<Navigate to="/PrimeiroAcesso" replace />}/>
+            <Route path="/TelaInicial" element={<TelaInicial />} />
             <Route path="/PrimeiroAcesso" element={<PrimeiroAcesso />} />
             <Route path="/Configuracoes" element={<Configuracoes />} />
             <Route path="/Conquistas" element={<Conquistas />} />

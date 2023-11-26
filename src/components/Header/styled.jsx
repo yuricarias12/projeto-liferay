@@ -25,6 +25,10 @@ export const AreaHeader = styled.div`
             gap: 25px;
 
         }
+
+        .liferay-img {
+            cursor: pointer;
+        }
         
         .search-box {
             margin-top: 2px;
@@ -122,6 +126,67 @@ export const AreaHeader = styled.div`
                
             }
         }
+
+
+        /* MENU SUSPENSO CSS */
+
+        #menuSuspenso {
+            position: absolute;
+            margin-top: 12px;
+            margin-right: 10px;
+            padding-bottom: 10px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            width: 150px;
+            right: 0; 
+            left: auto;
+            top: 61px; 
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        }
+
+        .menuItem {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            font-size: 12px;
+            cursor: pointer;
+            color:black;
+        }
+
+        .menu-link {
+            text-decoration: none;
+            color: black;
+        }
+        
+        
+        .menu-link:hover{
+            color:#0B63CE;
+        
+        }
+
+        .menuItem img {
+            max-width: 20px; 
+            max-height: 20px; 
+            margin-right: 10px; 
+        }
+
+        .btn-logout {
+            border-radius: 10px;
+            color: #fff;
+            background: #0B63CE;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+            cursor: pointer;
+            width: 80px;
+            height: 25px;
+            margin-left: 40px;
+            margin-top: 10px;
+        }
+            
+
+        /* FIM MENU SUSPENSO CSS */
 
         @media only screen and (max-width: 400px) {
 

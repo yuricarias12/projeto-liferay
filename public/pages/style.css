@@ -132,6 +132,10 @@ ul {
     margin-right: 10px; 
 }
 
+#minhaImagem {
+    cursor: pointer;
+}
+
 /* BUTTON DO MENU SUSPENSO */
 
 button[name="Logout"] {
@@ -153,6 +157,7 @@ button[name="Logout"] {
 button[name="Logout"]:hover {
     background-color: #0B63CE;
 }
+
 
 @media screen and (max-width: 970px) {
     .user-img #menuSuspenso {

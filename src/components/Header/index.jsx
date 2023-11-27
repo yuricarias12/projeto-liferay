@@ -27,7 +27,7 @@ function Header() {
 
   if (clicarLogoLiferay) {
     // Redireciona para a página HTML usando um caminho relativo
-    navigate('./pages/Telainicial.html');
+    window.location.href = './pages/Telainicial.html';
   } else {
     // Exibe uma mensagem ou lógica para lidar com o caso em que nem todos os níveis foram selecionados
     console.error('Por favor, selecione o nível para todas as competências.');

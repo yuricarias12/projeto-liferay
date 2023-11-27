@@ -38,29 +38,29 @@ const Page = () => {
                     </div>
                 </div>
 
-                <Link to="/"><button className="buttons-pg-config" type="button">Alterar Areas de Interesse <img src="refresh.png"></img></button></Link>
+                <Link to="/"><button className="buttons-pg-config" type="button">Alterar Areas de Interesse <img src="refresh.png" alt="refresh"></img></button></Link>
                 
                 <div className="competencias-text"><h3>Minhas Competências:</h3></div>
                 <div className="config-competencias">
                     
                     <div className="competencias-config">
-                        <img className="img-competencias-config" src="../../../javaimg.png" />
+                        <img className="img-competencias-config" src="../../../javaimg.png" alt="img-competencias" />
                     </div>
 
                     <div className="competencias-config">
-                        <img className="img-competencias-config" src="../../../csharpimg.png" />
+                        <img className="img-competencias-config" src="../../../csharpimg.png" alt="img-competencias" />
                     </div>
 
                     <div className="competencias-config">
-                        <img className="img-competencias-config" src="../../../react.png" />
+                        <img className="img-competencias-config" src="../../../react.png" alt="img-competencias" />
                     </div>
 
                     <div className="competencias-config">
-                        <img className="img-competencias-config" src="../../../javascript.png" />
+                        <img className="img-competencias-config" src="../../../javascript.png" alt="img-competencias" />
                     </div>
                 </div>
 
-               <Link to="/Competencias"><button className="buttons-pg-config" type="button">Alterar Competências <img src="refresh.png"></img></button></Link> 
+               <Link to="/Competencias"><button className="buttons-pg-config" type="button">Alterar Competências <img src="refresh.png" alt="refresh"></img></button></Link> 
 
             </section>
 

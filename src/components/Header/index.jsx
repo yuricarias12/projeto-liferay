@@ -9,7 +9,7 @@ function Header() {
   const navigate = useNavigate();
 
   const handleImagemClick = (event) => {
-    event.preventDefault(); // Evita o comportamento padrão do clique
+    event.preventDefault(); 
     setMenuSuspensoVisivel(!menuSuspensoVisivel);
   };
 
@@ -22,14 +22,14 @@ function Header() {
   const handleLogoLiferayClick = () => {
     setFinalizarClicado(true);
     
-    // Aqui você deve verificar se todos os níveis foram selecionados
-  const clicarLogoLiferay = true; // Substitua com sua lógica de verificação
+   
+  const clicarLogoLiferay = true; 
 
   if (clicarLogoLiferay) {
-    // Redireciona para a página HTML usando um caminho relativo
+    
     window.location.href = './pages/Telainicial.html';
   } else {
-    // Exibe uma mensagem ou lógica para lidar com o caso em que nem todos os níveis foram selecionados
+    
     console.error('Por favor, selecione o nível para todas as competências.');
   }
   };

@@ -10,7 +10,7 @@ function Footer() {
 <div className="footer-info">
 
 <div className="current-language">
-    <img src="../../../glob.png"/>
+    <img src="../../../glob.png" alt="globo"/>
     <span>Português</span>
 </div>
 

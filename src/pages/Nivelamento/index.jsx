@@ -13,10 +13,17 @@ const Nivelamento = () => {
   // Estados para armazenar níveis selecionados e controle do botão "Finalizar"
   const [nivelSelecionado, setNivelSelecionado] = useState({});
   const [finalizarClicado, setFinalizarClicado] = useState(false);
+  const [estaSelecionado, setSelecionado] = useState(false); // Adicionado para controlar se pelo menos um nível foi selecionado
 
   // Função para lidar com a mudança de nível para uma competência específica
   const handleNivelChange = (index, novoNivel) => {
     setNivelSelecionado((prev) => ({ ...prev, [index]: novoNivel }));
+  };
+
+  // Função para verificar se pelo menos um nível foi selecionado
+  const verificarNiveisSelecionados = () => {
+    const niveisSelecionados = Object.values(nivelSelecionado);
+    return niveisSelecionados.some((nivel) => nivel !== ""); // Retorna true se pelo menos um nível não for vazio
   };
 
   
@@ -28,13 +35,18 @@ const Nivelamento = () => {
 
     if (todosNiveisSelecionados) {
       // Redireciona para a página HTML usando um caminho relativo
-      window.location.href = './pages/Telainicial.html';
+      window.location.href = './pages/TelaInicial/Telainicial.html';
     } else {
       // Exibe uma mensagem ou lógica para lidar com o caso em que nem todos os níveis foram selecionados
       console.error('Por favor, selecione o nível para todas as competências.');
     }
 
   };
+
+  // Adicionado para atualizar o estado "estaSelecionado" quando houver mudança nos níveis selecionados
+  React.useEffect(() => {
+    setSelecionado(verificarNiveisSelecionados());
+  }, [nivelSelecionado]);
 
   
   return (
@@ -89,7 +101,7 @@ const Nivelamento = () => {
             Voltar
           </button>
         </Link>
-        <button type="button" className="buttons" id="btnFinalizar" onClick={handleFinalizarClick}>
+        <button type="button" className="buttons" id="btnFinalizar" disabled={!estaSelecionado} onClick={handleFinalizarClick}>
           Finalizar <img src="../../../finish.png" alt="V" />
         </button>
       </div>

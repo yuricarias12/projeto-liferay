@@ -27,7 +27,7 @@ function Header() {
 
   if (clicarLogoLiferay) {
     
-    window.location.href = './pages/Telainicial.html';
+    window.location.href = './pages/TelaInicial/Telainicial.html';
   } else {
     
     console.error('Por favor, selecione o nível para todas as competências.');

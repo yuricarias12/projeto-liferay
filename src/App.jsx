@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
+import { BrowserRouter, Route, Routes, Navigate, useLocation } from 'react-router-dom';
 
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -16,16 +16,23 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const App = () => {
-  // Função para verificar se a rota atual é a página de login
-  const isLoginPage = window.location.pathname.includes("/Login");
-
   return (
     <BrowserRouter>
-      {/* Renderiza o Header apenas se não estiver na página de login */}
+      <AppContent />
+    </BrowserRouter>
+  );
+}
+
+const AppContent = () => {
+  const location = useLocation();
+  const isLoginPage = location.pathname === "/Login";
+
+  return (
+    <>
       {!isLoginPage && <Header />}
       
       <Routes>
-        <Route path="/" element={<Navigate to="/PrimeiroAcesso" replace />} />
+        <Route path="/" element={<Navigate to="/Login" replace />} />
         <Route path="/PrimeiroAcesso" element={<PrimeiroAcesso />} />
         <Route path="/Login" element={<Login />} />
         <Route path="/Configuracoes" element={<Configuracoes />} />
@@ -35,9 +42,8 @@ const App = () => {
         <Route path="/Nivelamento" element={<Nivelamento />} />
       </Routes>
 
-      {/* Renderiza o Footer apenas se não estiver na página de login */}
       {!isLoginPage && <Footer />}
-    </BrowserRouter>
+    </>
   );
 }
 

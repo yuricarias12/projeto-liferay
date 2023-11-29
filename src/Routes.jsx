@@ -10,24 +10,16 @@ import Nivelamento from './pages/Nivelamento';
 import Login from './pages/Login';
 
 
-const RedirectToLogin = () => {
-    useEffect(() => {
-      
-      window.location.href = "./pages/TelaLogin/Login.html";
-    }, []);
-  
-    
-    return null;
-  };
+
 
 
 const App = () => {
     return (
         <Routes>
-             <Route path="/" element={<RedirectToLogin />} />
-            <Route path="/" element={<Navigate to="/PrimeiroAcesso" replace />}/>
-            <Route path="/PrimeiroAcesso" element={<PrimeiroAcesso />} />
+            
+            <Route path="/" element={<Navigate to="/Login" replace />}/>
             <Route path="/Login" element={<Login />} />
+            <Route path="/PrimeiroAcesso" element={<PrimeiroAcesso />} />
             <Route path="/Configuracoes" element={<Configuracoes />} />
             <Route path="/Conquistas" element={<Conquistas />} />
             <Route path="/DescubraEvento" element={<DescubraEvento />} />

@@ -7,6 +7,7 @@ import Conquistas from './pages/Conquistas';
 import DescubraEvento from './pages/DescubraEvento';
 import Competencias from './pages/Competencias';
 import Nivelamento from './pages/Nivelamento';
+import Login from './pages/Login';
 
 
 const RedirectToLogin = () => {
@@ -26,6 +27,7 @@ const App = () => {
              <Route path="/" element={<RedirectToLogin />} />
             <Route path="/" element={<Navigate to="/PrimeiroAcesso" replace />}/>
             <Route path="/PrimeiroAcesso" element={<PrimeiroAcesso />} />
+            <Route path="/Login" element={<Login />} />
             <Route path="/Configuracoes" element={<Configuracoes />} />
             <Route path="/Conquistas" element={<Conquistas />} />
             <Route path="/DescubraEvento" element={<DescubraEvento />} />

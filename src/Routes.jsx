@@ -1,13 +1,14 @@
 import React, { useEffect } from "react";
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 
+import Login from './pages/Login';
 import PrimeiroAcesso from './pages/PrimeiroAcesso';
 import Configuracoes from './pages/Configuracoes';
 import Conquistas from './pages/Conquistas';
 import DescubraEvento from './pages/DescubraEvento';
 import Competencias from './pages/Competencias';
 import Nivelamento from './pages/Nivelamento';
-import Login from './pages/Login';
+
 
 
 

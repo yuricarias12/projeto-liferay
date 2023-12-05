@@ -35,7 +35,7 @@ const Nivelamento = () => {
 
     if (todosNiveisSelecionados) {
       // Redireciona para a página HTML usando um caminho relativo
-      window.location.href = './pages/TelaInicial/Telainicial.html';
+      window.location.href = '/pages/TelaInicial/Telainicial.html';
     } else {
       // Exibe uma mensagem ou lógica para lidar com o caso em que nem todos os níveis foram selecionados
       console.error('Por favor, selecione o nível para todas as competências.');

@@ -130,7 +130,7 @@ function Header() {
                     </a>
                   </div>
                   <button className="btn-logout">
-                    <a className="link-logout" href="./pages/TelaLogin/Login.html">
+                    <a className="link-logout" href="/Login">
                       <span className="logout-text">Logout</span> <img src="../../../imglogout.png" alt="logout" />
                     </a>
                   </button>

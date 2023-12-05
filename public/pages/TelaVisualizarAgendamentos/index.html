@@ -1,20 +1,26 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meus Eventos</title>
-    <link rel="stylesheet" href="./css/style.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+    
 </head>
+
 <body>
     <header>
         <nav class="nav-bar">
 
             <div class="logo-img-search-box">
-                <a href="https://www.liferay.com/pt/" class="liferay-img" alt="liferay">
+                <a href="../TelaInicial/TelaInicial.html" class="liferay-img" alt="liferay">
                     <img src="img/liferay.png" alt="logo">
                 </a>
-        
+
                 <div class="search-box">
                     <a href="#" class="search-btn">
                         <img src="img/loupe.png" alt="lupa" height="20" width="20" />
@@ -23,11 +29,11 @@
                     <img src="img/mdi_arrow-down-drop.png" alt="barra">
                 </div>
             </div>
-        
+
             <div class="nav-items-btn-user-img">
                 <a id="nav-link" class="nav-item">Descubra um Evento</a>
                 <a id="nav-link" class="nav-item">Criar um Evento</a>
-                
+
                 <div class="user-img">
                     <img src="img/fotoperfil.png" alt="perfil" id="minhaImagem">
                     <div id="menuSuspenso">
@@ -35,18 +41,18 @@
                             <img src="img/imgperfil.png" alt="perfil">
                             <a class="menu-link" href="#" class="profile-img"><span>Charles Henrique</span></a>
                         </div>
-    
+
                         <div class="menuItem">
                             <img src="img/imginscricao.jpg" alt="inscricao">
-                            <a class="menu-link" href="#" class="profile-img"><span>Minhas Inscrições</span></a>
+                            <a class="menu-link" href="../TelaVisualizarEventos/index.html" class="profile-img"><span>Minhas Inscrições</span></a>
                         </div>
                         <div class="menuItem">
                             <img src="img/imgagenda.png" alt="agenda">
-                            <a class="menu-link" href="./pages/TelaVisualizarAgendamentos/index.html" class="profile-img"><span>Meus Agendamentos</span></a>
+                            <a class="menu-link" href="./index.html" class="profile-img"><span>Meus Agendamentos</span></a>
                         </div>
                         <div class="menuItem">
                             <img src="img/imgconquista.png" alt="conquista">
-                            <a class="menu-link" href="/Conquistas" class="profile-img"><span>Minhas Conquistas</span></a>
+                            <a class="menu-link" href="/Conquistas" class="profile-img"><span>MInhas Conquistas</span></a>
                         </div>
                         <div class="menuItem">
                             <img src="img/imgconfig.png" alt="config">
@@ -58,35 +64,35 @@
                             </a>
                           </button>
                     </div>
-                    
+
+                </div>
             </div>
-            </div>
-        
+
             <script>
 
                 document.addEventListener("DOMContentLoaded", function () {
-        
+
                     var imagemElement = document.getElementById("minhaImagem");
                     var menuSuspensoElement = document.getElementById("menuSuspenso");
-        
+
                     imagemElement.onclick = function (event) {
                         // Impedir que o clique na imagem propague para outros elementos
                         event.stopPropagation();
-        
-        
+
+
                         if (menuSuspensoElement.style.display === "none" || menuSuspensoElement.style.display === "") {
                             menuSuspensoElement.style.display = "block";
                         } else {
                             menuSuspensoElement.style.display = "none";
                         }
                     };
-        
-                });
-            </script>
-        
-        </nav>
 
+                });
+            </script>
+
+        </nav>
     </header>
+
     <main>
         <h1> Meus Agendamentos</h1>
         <div class="centralizar-tabela">
@@ -96,34 +102,62 @@
                     <th style="width:20%;">Local</th>
                     <th style="width:20%;">Data</th>
                     <th style="width:20%;">Horário</th>
+                    <th style="width:15%;">Editar evento</th>
                 </tr>
-                <tr>
+                <tr data-row-id="1">
                     <td>Java Básico</td>
                     <td>R. dos Arcos, 100 - Poço da Panela, Recife</td>
                     <td>20/12/2023</td>
                     <td>16h 18min</td>
+                    <td class="acao-buttons">
+                        
+                        <input type="image" src="img/close.png"class="delete-btn" onclick="excluirLinha(this)" style="max-width:20px; max-height:20px; margin-top: 9px;">
+                        <input type="image" src="img/trash-bin.png"class="delete-btn" onclick="excluirLinha(this)" style="max-width:20px; max-height:20px; margin-top: 9px; margin-left: 10px;">
+                        <li><a href='https://www.google.com/'><button type="submit">
+                            <img src="img\pencil.png" style="max-width:20px; max-height:20px; margin-top: 5px;">
+                          </button></a>
+                        </li>
+                    </td>
                 </tr>
                 <tr>
                     <td>Jira</td>
                     <td>Online</td>
                     <td>11/12/2023</td>
                     <td>15h 15min</td>
+                    <td class="acao-buttons">
+                        <input type="image" src="img/close.png" class="delete-btn" onclick="excluirLinha(this)"style="max-width:20px; max-height:20px; margin-top: 9px;">
+                        <input type="image" src="img/trash-bin.png" class="delete-btn" onclick="excluirLinha(this)"style="max-width:20px; max-height:20px; margin-top: 9px; margin-left: 10px;">
+                        <li><a href='https://www.google.com/'><button type="submit">
+                            <img src="img\pencil.png" style="max-width:20px; max-height:20px; margin-top: 5px;">
+                          </button></a>
+                        </li>
+                       
+                    </td>
                 </tr>
             </table>
         </div>
+        <script>
+            function excluirLinha(botao) {
+                
+                var linha = botao.closest('tr');
+        
+                
+                linha.remove();
+            }
+        </script>
+        
     </main>
 
     <footer>
-
         <div class="footer-area">
-    
+
             <div class="footer-info">
-    
+
                 <div class="current-language">
                     <img src="img/glob.png" alt="globo">
                     <span>Português</span>
                 </div>
-    
+
                 <ul>
                     <h3>Platform</h3>
                     <li class="nav-menu-item"><a href="https://www.liferay.com/pt/resources">Biblioteca de Documentos</a>
@@ -139,7 +173,7 @@
                             Dias</a>
                     </li>
                 </ul>
-    
+
                 <ul>
                     <h3>Sobre a empresa</h3>
                     <li class="nav-menu-item"><a href="https://www.liferay.com/pt/press-releases/-/categories/18021">Press
@@ -150,7 +184,7 @@
                     <li class="nav-menu-item"><a href="https://www.liferay.com/pt/compliance">Compilance</a></li>
                     <li class="nav-menu-item"><a href="https://www.liferay.com/pt/legal">Legal</a></li>
                 </ul>
-    
+
                 <ul>
                     <h3>Expand & Connect</h3>
                     <li class="nav-menu-item"><a href="https://liferay.dev/">Comunidade</a></li>
@@ -158,7 +192,7 @@
                     <li class="nav-menu-item"><a href="https://marketplace.liferay.com/">Marketplace</a></li>
                     <li class="nav-menu-item"><a href="https://login.liferay.com/">Login/Criar conta</a></li>
                 </ul>
-    
+
                 <ul>
                     <div class="redes-sociais">
                         <li><a href="https://www.facebook.com/liferay/"><img src="img/facebook.png" alt="Facebook" /></a>
@@ -175,7 +209,7 @@
                                     alt="Youtube" /></a>
                         </li>
                     </div>
-    
+
                     <div class="contact">
                         <div class="call-center">
                             <a href="https://www.liferay.com/pt/contact-us">
@@ -189,16 +223,17 @@
                     </div>
                 </ul>
             </div>
-    
+
             <div class="by-lf">
                 <p>Powered by Liferay</p>
                 <p>©️ 2023 Liferay Inc. Todos os Direitos Reservados</p>
                 <a href="https://www.liferay.com/pt/privacy-policy">Política de Privacidade</a>
             </div>
-    
-    
+
         </div>
-    
     </footer>
+
+   
 </body>
+
 </html>

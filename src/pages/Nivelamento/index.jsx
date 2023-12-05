@@ -34,8 +34,10 @@ const Nivelamento = () => {
     const todosNiveisSelecionados = true; // Substitua com sua lógica de verificação
 
     if (todosNiveisSelecionados) {
-      // Redireciona para a página HTML usando um caminho relativo
-      window.location.href = '/pages/TelaInicial/Telainicial.html';
+      // Cria um link e simula um clique para navegar para a página HTML usando um caminho relativo
+      var link = document.createElement('a');
+      link.href = '/pages/TelaInicial/Telainicial.html';
+      link.click();
     } else {
       // Exibe uma mensagem ou lógica para lidar com o caso em que nem todos os níveis foram selecionados
       console.error('Por favor, selecione o nível para todas as competências.');

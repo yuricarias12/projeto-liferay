@@ -669,11 +669,18 @@ button[name="Logout"] {
     height: 25px;
     margin-left: 40px;
     margin-top: 10px;
+    
 }
 
 
 button[name="Logout"]:hover {
     background-color: #0B63CE;
+}
+
+.link-logout {
+  text-decoration: none;
+  color: red;
+  border: 2px solid red;
 }
 
 @media screen and (max-width: 970px) {

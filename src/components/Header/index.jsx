@@ -1,17 +1,26 @@
 // useOutsideClick.js
 import React, { useState, useEffect } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 
 import { AreaHeader } from "./styled";
 
 function Header() {
   const [menuSuspensoVisivel, setMenuSuspensoVisivel] = useState(false);
   const navigate = useNavigate();
+  const location = useLocation();
 
   const handleImagemClick = (event) => {
-    event.preventDefault(); 
-    setMenuSuspensoVisivel(!menuSuspensoVisivel);
+    event.preventDefault();
+
+    // Paginas onde o menu suspenso e o click na logo da liferay serão bloqueados
+    const pagesToBlock = ["/PrimeiroAcesso", "/Competencias", "/Nivelamento"];
+
+    if (!pagesToBlock.includes(location.pathname)) {
+      setMenuSuspensoVisivel(!menuSuspensoVisivel);
+    }
   };
+
+  
 
   const handleFecharMenuSuspenso = () => {
     setMenuSuspensoVisivel(false);
@@ -21,19 +30,17 @@ function Header() {
 
   const handleLogoLiferayClick = () => {
     setFinalizarClicado(true);
-    
-   
-  const clicarLogoLiferay = true; 
 
-  if (clicarLogoLiferay) {
-    
-    window.location.href = './pages/TelaInicial/Telainicial.html';
-  } else {
-    
-    console.error('Por favor, selecione o nível para todas as competências.');
-  }
+    // Adicione páginas que você deseja bloquear aqui
+    const pagesToBlock = ["/PrimeiroAcesso", "/Competencias", "/Nivelamento"];
+
+    if (pagesToBlock.includes(location.pathname)) {
+      console.log("Clique bloqueado na página", location.pathname);
+      return;
+    }
+
+    window.location.href = "./pages/TelaInicial/Telainicial.html";
   };
-
 
   return (
     <AreaHeader>
@@ -74,51 +81,65 @@ function Header() {
               <img src="../../../user-img.png" alt="Imagem de perfil" />
             </a>
             {menuSuspensoVisivel && (
-              <div id="menuSuspenso"  onClick={handleFecharMenuSuspenso}>
-                  <div>
-                    <div className="menuItem">
-                      <img src="../../../imgperfil.png" alt="perfil" />
-                      <a className="menu-link" href="#" id="profile-img">
-                        <span>Charles Henrique</span>
-                      </a>
-                    </div>
-
-                    <div className="menuItem">
-                      <img src="../../../imginscricao.jpg" alt="inscricao" />
-                      <a className="menu-link" href="#" id="profile-img">
-                        <span>Minhas Inscrições</span>
-                      </a>
-                    </div>
-
-                    <div className="menuItem">
-                      <img src="../../../imgagenda.png" alt="agenda" />
-                      <a className="menu-link" href="#" id="profile-img">
-                        <span>Meus Agendamentos</span>
-                      </a>
-                    </div>
-
-                    <div className="menuItem">
-                      <img src="../../../imgconquista.png" alt="conquista" />
-                      <a className="menu-link" href="/Conquistas" id="profile-img">
-                        <span>Minhas Conquistas</span>
-                      </a>
-                    </div>
-
-                    <div className="menuItem">
-                      <img src="../../../imgconfig.png" alt="config" />
-                      <a className="menu-link" href="/Configuracoes" id="profile-img">
-                        <span>Configurações</span>
-                      </a>
-                    </div>
-                    <button className="btn-logout">Logout <img src="../../../imglogout.png" alt="logout" /></button>
+              <div id="menuSuspenso" onClick={handleFecharMenuSuspenso}>
+                <div>
+                  <div className="menuItem">
+                    <img src="../../../imgperfil.png" alt="perfil" />
+                    <a className="menu-link" href="#" id="profile-img">
+                      <span>Charles Henrique</span>
+                    </a>
                   </div>
-                
+
+                  <div className="menuItem">
+                    <img src="../../../imginscricao.jpg" alt="inscricao" />
+                    <a className="menu-link" href="#" id="profile-img">
+                      <span>Minhas Inscrições</span>
+                    </a>
+                  </div>
+
+                  <div className="menuItem">
+                    <img src="../../../imgagenda.png" alt="agenda" />
+                    <a
+                      className="menu-link"
+                      href="./pages/TelaVisualizarAgendamentos/index.html"
+                      id="profile-img"
+                    >
+                      <span>Meus Agendamentos</span>
+                    </a>
+                  </div>
+
+                  <div className="menuItem">
+                    <img src="../../../imgconquista.png" alt="conquista" />
+                    <a
+                      className="menu-link"
+                      href="/Conquistas"
+                      id="profile-img"
+                    >
+                      <span>Minhas Conquistas</span>
+                    </a>
+                  </div>
+
+                  <div className="menuItem">
+                    <img src="../../../imgconfig.png" alt="config" />
+                    <a
+                      className="menu-link"
+                      href="/Configuracoes"
+                      id="profile-img"
+                    >
+                      <span>Configurações</span>
+                    </a>
+                  </div>
+                  <button className="btn-logout">
+                    <a className="link-logout" href="./pages/TelaLogin/Login.html">
+                      <span className="logout-text">Logout</span> <img src="../../../imglogout.png" alt="logout" />
+                    </a>
+                  </button>
+                </div>
               </div>
             )}
           </div>
         </div>
       </nav>
-      
     </AreaHeader>
   );
 }

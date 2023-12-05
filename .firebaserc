@@ -1,8 +1,8 @@
 {
   "projects": {
-    "default": "liferay-94732",
+    "default": "liferay-34fab",
     "PrimeiroAcesso": "liferay-82bd4",
-    "yes": "liferay-94732"
+    "yes": "liferay-34fab"
   },
   "targets": {},
   "etags": {}

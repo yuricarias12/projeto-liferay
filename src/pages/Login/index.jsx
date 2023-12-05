@@ -64,7 +64,7 @@ const Page = () => {
                 <div className="box-lembrar-senha">
                   <p>
                     Primeiro acesso? Ative{" "}
-                    <a className="link" href="./TelaAtivacao/Cadastro.html">
+                    <a className="link" href="./pages/TelaAtivacaoConta/Cadastro.html">
                       aqui
                     </a>{" "}
                     a sua conta

@@ -136,9 +136,7 @@ ul {
     cursor: pointer;
 }
 
-/* BUTTON DO MENU SUSPENSO */
-
-button[name="Logout"] {
+.btn-logout {
     border-radius: 10px;
     color: #fff;
     background: #0B63CE;
@@ -147,15 +145,14 @@ button[name="Logout"] {
     align-items: center;
     gap: 5px;
     cursor: pointer;
-    width: 75px;
+    width: 80px;
     height: 25px;
     margin-left: 40px;
     margin-top: 10px;
 }
 
-
-button[name="Logout"]:hover {
-    background-color: #0B63CE;
+.logout-text {
+    color: #fff;
 }
 
 

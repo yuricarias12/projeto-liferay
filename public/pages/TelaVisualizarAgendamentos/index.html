@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meus Eventos</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="nav-bar">
+
+            <div class="logo-img-search-box">
+                <a href="https://www.liferay.com/pt/" class="liferay-img" alt="liferay">
+                    <img src="img/liferay.png" alt="logo">
+                </a>
+        
+                <div class="search-box">
+                    <a href="#" class="search-btn">
+                        <img src="img/loupe.png" alt="lupa" height="20" width="20" />
+                    </a>
+                    <input type="text" class="search-text" placeholder="Pesquisar..." />
+                    <img src="img/mdi_arrow-down-drop.png" alt="barra">
+                </div>
+            </div>
+        
+            <div class="nav-items-btn-user-img">
+                <a id="nav-link" class="nav-item">Descubra um Evento</a>
+                <a id="nav-link" class="nav-item">Criar um Evento</a>
+                
+                <div class="user-img">
+                        <img src="img/fotoperfil.png" alt="perfil" id="minhaImagem">
+                        <div id="menuSuspenso">
+                            <div class="menuItem">
+                                <img src="img/imgperfil.png" alt="perfil">
+                                <a class="menu-link" href="#" class="profile-img"><span>Charles Henrique</span></a>
+                            </div>
+        
+                            <div class="menuItem">
+                                <img src="img/imginscricao.jpg" alt="inscricao">
+                                <a class="menu-link" href="#" class="profile-img"><span>Minhas Inscrições</span></a>
+                            </div>
+                            <div class="menuItem">
+                                <img src="img/imgagenda.png" alt="agenda">
+                                <a class="menu-link" href="#" class="profile-img"><span>Meus Agendamentos</span></a>
+                            </div>
+                            <div class="menuItem">
+                                <img src="img/imgconquista.png" alt="conquista">
+                                <a class="menu-link" href="#" class="profile-img"><span>MInhas Conquistas</span></a>
+                            </div>
+                            <div class="menuItem">
+                                <img src="img/imgconfig.png" alt="config">
+                                <a class="menu-link" href="#" class="profile-img"><span>Configurações</span></a>
+                            </div>
+                            <button  name="Logout">Logout <img src="img/imglogout.png" alt="logout"></button>
+                        </div>
+                        
+                </div>
+            </div>
+        
+            <script>
+
+                document.addEventListener("DOMContentLoaded", function () {
+        
+                    var imagemElement = document.getElementById("minhaImagem");
+                    var menuSuspensoElement = document.getElementById("menuSuspenso");
+        
+                    imagemElement.onclick = function (event) {
+                        // Impedir que o clique na imagem propague para outros elementos
+                        event.stopPropagation();
+        
+        
+                        if (menuSuspensoElement.style.display === "none" || menuSuspensoElement.style.display === "") {
+                            menuSuspensoElement.style.display = "block";
+                        } else {
+                            menuSuspensoElement.style.display = "none";
+                        }
+                    };
+        
+                });
+            </script>
+        
+        </nav>
+
+    </header>
+    <main>
+        <h1> Meus Agendamentos</h1>
+        <div class="centralizar-tabela">
+            <table id="Tabela">
+                <tr class="principal">
+                    <th>Nome do evento</th>
+                    <th style="width:20%;">Local</th>
+                    <th style="width:20%;">Data</th>
+                    <th style="width:20%;">Horário</th>
+                </tr>
+                <tr>
+                    <td>Java Básico</td>
+                    <td>R. dos Arcos, 100 - Poço da Panela, Recife</td>
+                    <td>20/12/2023</td>
+                    <td>16h 18min</td>
+                </tr>
+                <tr>
+                    <td>Jira</td>
+                    <td>Online</td>
+                    <td>11/12/2023</td>
+                    <td>15h 15min</td>
+                </tr>
+            </table>
+        </div>
+    </main>
+
+    <footer>
+
+        <div class="footer-area">
+    
+            <div class="footer-info">
+    
+                <div class="current-language">
+                    <img src="img/glob.png" alt="globo">
+                    <span>Português</span>
+                </div>
+    
+                <ul>
+                    <h3>Platform</h3>
+                    <li class="nav-menu-item"><a href="https://www.liferay.com/pt/resources">Biblioteca de Documentos</a>
+                    </li>
+                    <li class="nav-menu-item"><a href="https://www.liferay.com/pt/subscription-services">Subscription
+                            Services</a></li>
+                    <li class="nav-menu-item"><a href="https://www.liferay.com/pt/request-a-demo">Solicitar uma Demo</a>
+                    </li>
+                    <li class="nav-menu-item"><a
+                            href="https://marketplace.liferay.com/?_ga=2.189048232.2004875729.1696619539-1744529282.1694543426&_gac=1.190250329.1696253436.Cj0KCQjw1OmoBhDXARIsAAAYGSGHWli4U2YTVV-qK7ABjkL4BwqyGLn6SMZgQrw7e0XD0F-x1-mAyF8aAt9zEALw_wcB">Apps
+                            do Marketplace</a></li>
+                    <li class="nav-menu-item"><a href="https://www.liferay.com/pt/products/dxp/30-day-trial">Trial 30
+                            Dias</a>
+                    </li>
+                </ul>
+    
+                <ul>
+                    <h3>Sobre a empresa</h3>
+                    <li class="nav-menu-item"><a href="https://www.liferay.com/pt/press-releases/-/categories/18021">Press
+                            Releases</a></li>
+                    <li class="nav-menu-item"><a href="https://www.liferay.com/pt/careers">Carreiras</a></li>
+                    <li class="nav-menu-item"><a href="https://www.liferay.com/pt/gdpr">GDPR</a></li>
+                    <li class="nav-menu-item"><a href="https://www.liferay.com/pt/company/our-story">Nossa História</a></li>
+                    <li class="nav-menu-item"><a href="https://www.liferay.com/pt/compliance">Compilance</a></li>
+                    <li class="nav-menu-item"><a href="https://www.liferay.com/pt/legal">Legal</a></li>
+                </ul>
+    
+                <ul>
+                    <h3>Expand & Connect</h3>
+                    <li class="nav-menu-item"><a href="https://liferay.dev/">Comunidade</a></li>
+                    <li class="nav-menu-item"><a href="https://liferay.dev/">Rede de Desenvolvedores</a></li>
+                    <li class="nav-menu-item"><a href="https://marketplace.liferay.com/">Marketplace</a></li>
+                    <li class="nav-menu-item"><a href="https://login.liferay.com/">Login/Criar conta</a></li>
+                </ul>
+    
+                <ul>
+                    <div class="redes-sociais">
+                        <li><a href="https://www.facebook.com/liferay/"><img src="img/facebook.png" alt="Facebook" /></a>
+                        </li>
+                        <li><a href="https://github.com/liferay"><img src="img/github.png" alt="Github" /></a></li>
+                        <li><a href="https://www.instagram.com/liferayinc/"><img src="img/instagram.png"
+                                    alt="Instagram" /></a>
+                        </li>
+                        <li><a href="https://www.linkedin.com/company/liferay-inc-/"><img src="img/linkedin.png"
+                                    alt="Linkedin" /></a></li>
+                        <li><a href="https://twitter.com/i/flow/login?redirect_after_login=%2Fliferay"> <img
+                                    src="img/twitter.png" alt="Twitter" /></a></li>
+                        <li><a href="https://www.youtube.com/user/liferayinc"><img src="img/youtube.png"
+                                    alt="Youtube" /></a>
+                        </li>
+                    </div>
+    
+                    <div class="contact">
+                        <div class="call-center">
+                            <a href="https://www.liferay.com/pt/contact-us">
+                                <h4>Fale Conosco</h4>
+                            </a>
+                        </div>
+                        <p id="addRess">Rua dos ARCOS, Nº 160<br />
+                            Recife, PE 52061-180<br />
+                            Brasil<br />
+                            +55 81 2121-6000</p>
+                    </div>
+                </ul>
+            </div>
+    
+            <div class="by-lf">
+                <p>Powered by Liferay</p>
+                <p>©️ 2023 Liferay Inc. Todos os Direitos Reservados</p>
+                <a href="https://www.liferay.com/pt/privacy-policy">Política de Privacidade</a>
+            </div>
+    
+    
+        </div>
+    
+    </footer>
+</body>
+</html>

@@ -48,7 +48,7 @@
                     </div>
                     <div class="menuItem">
                         <img src="img/imgagenda.png" alt="agenda">
-                        <a class="menu-link" href="#" class="profile-img"><span>Meus Agendamentos</span></a>
+                        <a class="menu-link" href="../TelaVisualizarAgendamentos/index.html" class="profile-img"><span>Meus Agendamentos</span></a>
                     </div>
                     <div class="menuItem">
                         <img src="img/imgconquista.png" alt="conquista">
@@ -58,7 +58,11 @@
                         <img src="img/imgconfig.png" alt="config">
                         <a class="menu-link" href="/Configuracoes" class="profile-img"><span>Configurações</span></a>
                     </div>
-                    <button  name="Logout">Logout <img src="img/imglogout.png" alt="logout"></button>
+                    <button class="btn-logout">
+                        <a class="link-logout" href="../TelaLogin/Login.html">
+                          <span class="logout-text">Logout</span> <img src="../../../imglogout.png" alt="logout" />
+                        </a>
+                      </button>
                 </div>
                 
         </div>
@@ -135,14 +139,16 @@
 <h1 id="text">Próximos Eventos:</h1>
 <div class="eventos">
     <div class="eventos-box">
-        <div class="eventos-box-img">
-            <img src="img/evento1.png" alt="evento1">
-        </div>
-        <div class="eventos-box-text">
-            <p class="data"> Sab, 29 OUT - 16:00</p>
-            <p class="apresentacao"> Programação básica em Java</p>
-            <p class="palestrante"> Por Thiago de Almeida</p>
-        </div>
+        <a href="../TelaInscricaoEventos/index.html" class="evento-link">
+            <div class="eventos-box-img">
+              <img src="img/evento1.png" alt="evento1">
+            </div>
+            <div class="eventos-box-text">
+              <p class="data"> Sab, 29 OUT - 16:00</p>
+              <p class="apresentacao"> Programação básica em Java</p>
+              <p class="palestrante"> Por Thiago de Almeida</p>
+            </div>
+          </a>
     </div>
     <div class="eventos-box">
         <div class="eventos-box-img">

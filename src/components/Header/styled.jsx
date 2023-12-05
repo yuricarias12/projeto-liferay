@@ -184,6 +184,10 @@ export const AreaHeader = styled.div`
             margin-left: 40px;
             margin-top: 10px;
         }
+
+        .logout-text {
+            color: #fff;
+        }
             
 
         /* FIM MENU SUSPENSO CSS */

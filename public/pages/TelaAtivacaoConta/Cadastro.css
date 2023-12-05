@@ -41,7 +41,7 @@ section {
     font-size: 23px;
     font-style: normal;
     font-weight: bold;
-    line-height: 20px; 
+    line-height: 20px;
     max-width: 320px;
 }
 
@@ -143,33 +143,51 @@ h2 {
     text-decoration: none;
 }
 
-@media (max-width: 768px) {
-    body {
-        height: auto;
-    }
+/* responsivo */ 
 
-    section {
-        flex-direction: column;
-        padding: 20px;
+@media (max-width: 1200px) {
+    .cont-img-txt {
+        margin-right: 0px;
     }
 
     .cont-img-logo {
-        margin-right: 0; 
-        margin-bottom: 20px; 
+        margin-left: 0px;
+        text-align: center;
     }
 
-    .wrapper {
-        width: 100%; 
-        max-width: 400px;
+    @media (max-width: 1000px) {
+        .subtitle {
+            display: none;
+        }
+        .cont-img-logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        .logotipo {
+            width: 250px;
+            height: 77.258px;
+        }
+        body {
+            display: grid;
+            grid-column: auto;
+        }
+        section {
+            margin-top: 100px;
+        }
+        .wrapper {
+            margin-bottom: 180px;
+        }
     }
-
-    .campo,
-    .botao {
-        width: 100%;
-        margin: 10px 0;
-    }
-
-    .botao {
-        width: auto;
+    @media (max-width: 360px) {
+        .logotipo {
+            width: 200px;
+            height: 61.806px;
+        }
+        .wrapper {
+            margin-bottom: 100px;
+        }
+        
     }
 }

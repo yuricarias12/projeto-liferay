@@ -54,7 +54,7 @@ const Page = () => {
                   />
 
                   <div className="botao-submit">
-                    <img src="../../../Vector.png" alt="vector"/>
+                    <img src="../../../Vector.png" alt="vector" />
                     <Link to="/PrimeiroAcesso">
                       <input type="button" className="botao" value="Entrar" />
                     </Link>

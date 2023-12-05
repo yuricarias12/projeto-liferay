@@ -87,10 +87,7 @@ const Page = () => {
                 </table>
 
             </section>
-
-
-
-
+            
         </ContainerPage>
 
     );

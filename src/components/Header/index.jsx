@@ -12,7 +12,7 @@ function Header() {
   const handleImagemClick = (event) => {
     event.preventDefault();
 
-    // Paginas onde o menu suspenso e o click na logo da liferay serão bloqueados
+    // Páginas onde o menu suspenso e o clique na logo da liferay serão bloqueados
     const pagesToBlock = ["/PrimeiroAcesso", "/Competencias", "/Nivelamento"];
 
     if (!pagesToBlock.includes(location.pathname)) {
@@ -20,33 +20,39 @@ function Header() {
     }
   };
 
-  
-
   const handleFecharMenuSuspenso = () => {
     setMenuSuspensoVisivel(false);
   };
 
   const [finalizarClicado, setFinalizarClicado] = useState(false);
 
-  const handleLogoLiferayClick = () => {
-    setFinalizarClicado(true);
-
-    // Adicione páginas que você deseja bloquear aqui
+  const handleLogoLiferayClick = (event) => {
+    // Páginas onde o clique na liferay-img será bloqueado
     const pagesToBlock = ["/PrimeiroAcesso", "/Competencias", "/Nivelamento"];
 
     if (pagesToBlock.includes(location.pathname)) {
-      console.log("Clique bloqueado na página", location.pathname);
-      return;
+      event.preventDefault();
     }
 
-    window.location.href = "./pages/TelaInicial/Telainicial.html";
+    setFinalizarClicado(true);
+
+    // O código abaixo será executado apenas se a página atual não estiver na lista de páginas bloqueadas
+    // ...
+
+    // Adicione qualquer lógica específica da página aqui
+
+    // ...
   };
 
   return (
     <AreaHeader>
       <nav className="nav-bar">
         <div className="logo-img-search-box">
-          <a className="liferay-img" onClick={handleLogoLiferayClick}>
+          <a
+            className="liferay-img"
+            href="./pages/TelaInicial/TelaInicial.html"
+            onClick={handleLogoLiferayClick}
+          >
             <img src="../../../liferay.png" alt="Liferay" />
           </a>
 
@@ -131,7 +137,8 @@ function Header() {
                   </div>
                   <button className="btn-logout">
                     <a className="link-logout" href="/Login">
-                      <span className="logout-text">Logout</span> <img src="../../../imglogout.png" alt="logout" />
+                      <span className="logout-text">Logout</span>{" "}
+                      <img src="../../../imglogout.png" alt="logout" />
                     </a>
                   </button>
                 </div>

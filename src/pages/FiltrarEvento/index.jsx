@@ -7,7 +7,7 @@ import { ContainerPage, TittlePage } from "../../components/Main";
 
 const Page = () => {
 
-    
+
 
     return (
         <ContainerPage>
@@ -16,7 +16,7 @@ const Page = () => {
                     <h3><strong>Principais Eventos</strong></h3>
                 </div>
             </TittlePage>
-            
+
 
             <div id="text-div">
 
@@ -80,7 +80,7 @@ const Page = () => {
                         </div>
                     </div>
 
-                
+
 
                 </div>
 
@@ -138,7 +138,7 @@ const Page = () => {
                         </div>
                     </div>
 
-                   
+
 
                 </div>
 

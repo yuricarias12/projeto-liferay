@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar Evento</title>
+    <!--FavIcon(Ícone Favorito)-->
+    <link rel="shortcut icon" href="img/apple-touch-icon.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="criarevento.css">
+    <script type="text/javascript" src="editar-imagem.js" defer></script>
+    <script type="text/javascript" src="calendario.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header> 
+        <nav class="nav-bar">
+
+            <div class="logo-img-search-box">
+                <a href="../TelaInicial/TelaInicial.html" class="liferay-img" alt="liferay">
+                    <img src="img/liferay.png" alt="logo">
+                </a>
+        
+                <div class="search-box">
+                    <a href="#" class="search-btn">
+                        <img src="img/loupe.png" alt="lupa" height="20" width="20" />
+                    </a>
+                    <input type="text" class="search-text" placeholder="Pesquisar..." />
+                    <img src="img/mdi_arrow-down-drop.png" alt="barra">
+                </div>
+            </div>
+        
+            <div class="nav-items-btn-user-img">
+                <a id="nav-link" class="nav-item" href="../TelaInicial/TelaInicial.html" >Descubra um Evento</a>
+                <a id="nav-link" class="nav-item" href="./criarevento.html">Criar um Evento</a>
+                
+                <div class="user-img">
+                        <img src="img/fotoperfil.png" alt="perfil" id="minhaImagem">
+                        <div id="menuSuspenso">
+                            <div class="menuItem">
+                                <img src="img/imgperfil.png" alt="perfil">
+                                <a class="menu-link" class="profile-img"><span>Charles Henrique</span></a>
+                            </div>
+        
+                            <div class="menuItem">
+                                <img src="img/imginscricao.jpg" alt="inscricao">
+                                <a class="menu-link" href="../TelaVisualizarEventos/index.html" class="profile-img"><span>Minhas Inscrições</span></a>
+                            </div>
+                            <div class="menuItem">
+                                <img src="img/imgagenda.png" alt="agenda">
+                                <a class="menu-link" href="../TelaVisualizarAgendamentos/index.html" class="profile-img"><span>Meus Agendamentos</span></a>
+                            </div>
+                            <div class="menuItem">
+                                <img src="img/imgconquista.png" alt="conquista">
+                                <a class="menu-link" href="/Conquistas" class="profile-img"><span>MInhas Conquistas</span></a>
+                            </div>
+                            <div class="menuItem">
+                                <img src="img/imgconfig.png" alt="config">
+                                <a class="menu-link" href="/Configuracoes" class="profile-img"><span>Configurações</span></a>
+                            </div>
+                            <button class="btn-logout">
+                                <a class="link-logout" href="/Login">
+                                  <span class="logout-text">Logout</span> <img src="../../../imglogout.png" alt="logout" />
+                                </a>
+                              </button>
+                        </div>
+                        
+                </div>
+            </div>
+        
+            <script>
+        
+                document.addEventListener("DOMContentLoaded", function () {
+        
+                    var imagemElement = document.getElementById("minhaImagem");
+                    var menuSuspensoElement = document.getElementById("menuSuspenso");
+        
+                    imagemElement.onclick = function (event) {
+                        // Impedir que o clique na imagem propague para outros elementos
+                        event.stopPropagation();
+        
+        
+                        if (menuSuspensoElement.style.display === "none" || menuSuspensoElement.style.display === "") {
+                            menuSuspensoElement.style.display = "block";
+                        } else {
+                            menuSuspensoElement.style.display = "none";
+                        }
+                    };
+        
+                });
+            </script>
+        
+        </nav>
+    </header>
+
+    <!--Geral-->
+    <div class="geral">
+        <h1 class="create-events">Criação de Eventos</h1>
+
+        <!--Editar Imagem-->
+        <form class="new-event" id="form-form">
+            <div class="image-upload new-event">
+                <img id="image-preview" src="img/java_screen.png" alt="" class="wh-100">
+                <input id="image-field" type="file">
+            </div >
+            <div class="new-event">
+                <label class="alter-label" for="image-field">EDITAR IMAGEM</label>
+            </div>   
+        </form><!--New-Event-->
+        <!--Editar Textos-->
+        <form class="text-event">
+            <h2 class="subtitle">Nome do Evento</h2>
+            <input class="event-name" type="text" placeholder="Digite o nome do evento" maxlength="100" minlength="5">
+
+            <h2 class="subtitle">Descrição do evento</h2>
+            <textarea class="event-description" name="" id="" cols="30" rows="10" placeholder="Descreva seu evento" maxlength="300" minlength="5"></textarea>
+        </form><!--text-event-->
+
+        <div class="conteudo">
+            <div class="calendario">
+                <header class="month">
+                    <img class="Google" src="img/Google Calendar.png" alt="">
+                    <a class="btn-ant" id="btn_ant">
+                        <img class="chevron-left-right" src="img/Chevron Left.png" alt="">
+                    </a>
+                    
+                    <h2 class="choose-month" id="mes">Abril</h2>
+                    <h2 class="choose-month">de</h2>
+                    <h2 class="choose-month" id="ano"></h2>
+                    <a class="btn-pro" id="btn_prev">
+                        <img class="chevron-left-right" src="img/Chevron Right.png" alt="">
+                    </a>
+                    
+                    <img class="Google" src="img/Google Calendar.png" alt="">
+                    
+                </header>
+                <hr class="line">
+                <table>
+                    <thead>
+                        <tr class="Week-Days">
+                            <td>Dom</td>
+                            <td>Seg</td>
+                            <td>Ter</td>
+                            <td>Qua</td>
+                            <td>Qui</td>
+                            <td>Sex</td>
+                            <td>Sab</td>
+                        </tr>
+                    </thead>
+                    <tbody id="dias">
+                        <tr class="Month-Days">
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>6</td>
+                            <td>7</td>
+                        </tr>
+                        <tr class="Month-Days">
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>6</td>
+                            <td>7</td>
+                        </tr>
+                        <tr class="Month-Days">
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>6</td>
+                            <td>7</td>
+                        </tr>
+                        <tr class="Month-Days">
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>6</td>
+                            <td>7</td>
+                        </tr>
+                        <tr class="Month-Days">
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>6</td>
+                            <td>7</td>
+                        </tr>
+                        <tr class="Month-Days">
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>6</td>
+                            <td>7</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+            </div><!--calendario-->
+        </div><!--conteudo-->
+        <div class="div-btn-criar">
+            <button class="btn-criar">
+                <a id="link-btn-criar-evento" href="../TelaVisualizarEventos/index.html">CRIAR EVENTO </a>
+                <img class="Group-4" src="img/Group 4.png" alt="">
+            </button>
+        </div>
+    </div><!--geral-->    
+    <footer>
+
+        <div class="footer-area">
+    
+            <div class="footer-info">
+    
+                <div class="current-language">
+                    <img src="img/glob.png" alt="globo">
+                    <span>Português</span>
+                </div>
+    
+                <ul>
+                    <h3>Platform</h3>
+                    <li class="nav-menu-item"><a href="https://www.liferay.com/pt/resources">Biblioteca de Documentos</a>
+                    </li>
+                    <li class="nav-menu-item"><a href="https://www.liferay.com/pt/subscription-services">Subscription
+                            Services</a></li>
+                    <li class="nav-menu-item"><a href="https://www.liferay.com/pt/request-a-demo">Solicitar uma Demo</a>
+                    </li>
+                    <li class="nav-menu-item"><a
+                            href="https://marketplace.liferay.com/?_ga=2.189048232.2004875729.1696619539-1744529282.1694543426&_gac=1.190250329.1696253436.Cj0KCQjw1OmoBhDXARIsAAAYGSGHWli4U2YTVV-qK7ABjkL4BwqyGLn6SMZgQrw7e0XD0F-x1-mAyF8aAt9zEALw_wcB">Apps
+                            do Marketplace</a></li>
+                    <li class="nav-menu-item"><a href="https://www.liferay.com/pt/products/dxp/30-day-trial">Trial 30
+                            Dias</a>
+                    </li>
+                </ul>
+    
+                <ul>
+                    <h3>Sobre a empresa</h3>
+                    <li class="nav-menu-item"><a href="https://www.liferay.com/pt/press-releases/-/categories/18021">Press
+                            Releases</a></li>
+                    <li class="nav-menu-item"><a href="https://www.liferay.com/pt/careers">Carreiras</a></li>
+                    <li class="nav-menu-item"><a href="https://www.liferay.com/pt/gdpr">GDPR</a></li>
+                    <li class="nav-menu-item"><a href="https://www.liferay.com/pt/company/our-story">Nossa História</a></li>
+                    <li class="nav-menu-item"><a href="https://www.liferay.com/pt/compliance">Compilance</a></li>
+                    <li class="nav-menu-item"><a href="https://www.liferay.com/pt/legal">Legal</a></li>
+                </ul>
+    
+                <ul>
+                    <h3>Expand & Connect</h3>
+                    <li class="nav-menu-item"><a href="https://liferay.dev/">Comunidade</a></li>
+                    <li class="nav-menu-item"><a href="https://liferay.dev/">Rede de Desenvolvedores</a></li>
+                    <li class="nav-menu-item"><a href="https://marketplace.liferay.com/">Marketplace</a></li>
+                    <li class="nav-menu-item"><a href="https://login.liferay.com/">Login/Criar conta</a></li>
+                </ul>
+    
+                <ul>
+                    <div class="redes-sociais">
+                        <li><a href="https://www.facebook.com/liferay/"><img src="img/facebook.png" alt="Facebook" /></a>
+                        </li>
+                        <li><a href="https://github.com/liferay"><img src="img/github.png" alt="Github" /></a></li>
+                        <li><a href="https://www.instagram.com/liferayinc/"><img src="img/instagram.png"
+                                    alt="Instagram" /></a>
+                        </li>
+                        <li><a href="https://www.linkedin.com/company/liferay-inc-/"><img src="img/linkedin.png"
+                                    alt="Linkedin" /></a></li>
+                        <li><a href="https://twitter.com/i/flow/login?redirect_after_login=%2Fliferay"> <img
+                                    src="img/twitter.png" alt="Twitter" /></a></li>
+                        <li><a href="https://www.youtube.com/user/liferayinc"><img src="img/youtube.png"
+                                    alt="Youtube" /></a>
+                        </li>
+                    </div>
+    
+                    <div class="contact">
+                        <div class="call-center">
+                            <a href="https://www.liferay.com/pt/contact-us">
+                                <h4>Fale Conosco</h4>
+                            </a>
+                        </div>
+                        <p id="addRess">Rua dos ARCOS, Nº 160<br />
+                            Recife, PE 52061-180<br />
+                            Brasil<br />
+                            +55 81 2121-6000</p>
+                    </div>
+                </ul>
+            </div>
+    
+            <div class="by-lf">
+                <p>Powered by Liferay</p>
+                <p>© 2023 Liferay Inc. Todos os Direitos Reservados</p>
+                <a href="https://www.liferay.com/pt/privacy-policy">Política de Privacidade</a>
+            </div>
+    
+    
+        </div>
+    
+    </footer>
+</body>
+</html>

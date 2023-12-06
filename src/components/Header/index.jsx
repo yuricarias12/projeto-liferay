@@ -5,43 +5,56 @@ import { Link, useNavigate, useLocation } from "react-router-dom";
 import { AreaHeader } from "./styled";
 
 function Header() {
-  const [menuSuspensoVisivel, setMenuSuspensoVisivel] = useState(false);
+
+ const [menuSuspensoVisivel, setMenuSuspensoVisivel] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
+  const [finalizarClicado, setFinalizarClicado] = useState(false);
 
+  // Função chamada quando a imagem na barra de navegação é clicada
   const handleImagemClick = (event) => {
     event.preventDefault();
 
-    // Páginas onde o menu suspenso e o clique na logo da liferay serão bloqueados
+    // Lista de páginas que não permitem o menu suspenso
     const pagesToBlock = ["/PrimeiroAcesso", "/Competencias", "/Nivelamento"];
 
+    // Verifica se a página atual está na lista de páginas bloqueadas
     if (!pagesToBlock.includes(location.pathname)) {
       setMenuSuspensoVisivel(!menuSuspensoVisivel);
     }
   };
 
+  // Função para fechar o menu suspenso
   const handleFecharMenuSuspenso = () => {
     setMenuSuspensoVisivel(false);
   };
 
-  const [finalizarClicado, setFinalizarClicado] = useState(false);
-
-  const handleLogoLiferayClick = (event) => {
-    // Páginas onde o clique na liferay-img será bloqueado
+  // Função para quando um link na barra de navegação é clicado
+  const handleLinkClick = (event, targetPage) => {
+    // Lista de páginas que não permitem a navegação para outras páginas
     const pagesToBlock = ["/PrimeiroAcesso", "/Competencias", "/Nivelamento"];
 
+    // Bloqueia a navegação se a página atual estiver na lista de páginas bloqueadas
+    if (pagesToBlock.includes(location.pathname)) {
+      event.preventDefault();
+      
+    }
+
+  };
+
+  // Função para quando o logo da Liferay é clicado
+  const handleLogoLiferayClick = (event) => {
+     // Lista de páginas que não permitem a navegação para a página inicial da Liferay
+    const pagesToBlock = ["/PrimeiroAcesso", "/Competencias", "/Nivelamento"];
+
+    // Bloqueia a navegação se a página atual estiver na lista de páginas bloqueadas
     if (pagesToBlock.includes(location.pathname)) {
       event.preventDefault();
     }
 
     setFinalizarClicado(true);
 
-    // O código abaixo será executado apenas se a página atual não estiver na lista de páginas bloqueadas
-    // ...
 
-    // Adicione qualquer lógica específica da página aqui
-
-    // ...
   };
 
   return (
@@ -71,16 +84,25 @@ function Header() {
         </div>
 
         <div className="nav-items-btn-user-img">
-          <a className="nav-item">
-            <Link to="/DescubraEvento" className="nav-link">
+          <div className="nav-item">
+            <a
+              href="./pages/TelaInicial/TelaInicial.html"
+              className="nav-link"
+              onClick={(event) => handleLinkClick(event, "./pages/TelaInicial/TelaInicial.html")}
+            >
               Descubra um Evento
-            </Link>
-          </a>
-          <a className="nav-item">
-            <Link to="/CriarEvento" className="nav-link">
+            </a>
+          </div>
+
+          <div className="nav-item">
+            <a
+              href="./pages/TelaCriarEvento/criarevento.html"
+              className="nav-link"
+              onClick={(event) => handleLinkClick(event, "./pages/TelaCriarEvento/criarevento.html")}
+            >
               Criar um Evento
-            </Link>
-          </a>
+            </a>
+          </div>
 
           <div className="user-img">
             <a href="#" className="profile-img" onClick={handleImagemClick}>
@@ -98,7 +120,7 @@ function Header() {
 
                   <div className="menuItem">
                     <img src="../../../imginscricao.jpg" alt="inscricao" />
-                    <a className="menu-link" href="#" id="profile-img">
+                    <a className="menu-link" href="./pages/TelaVisualizarEventos/index.html" id="profile-img">
                       <span>Minhas Inscrições</span>
                     </a>
                   </div>

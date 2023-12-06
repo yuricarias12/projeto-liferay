@@ -54,7 +54,7 @@ const Page = () => {
           </div>
         </div>
 
-        <Link to="/">
+        <Link to="/PrimeiroAcesso">
           <button className="buttons-pg-config" type="button">
             Alterar Areas de Interesse{" "}
             <img src="refresh.png" alt="refresh"></img>

@@ -12,6 +12,7 @@ import DescubraEvento from './pages/DescubraEvento';
 import Competencias from './pages/Competencias';
 import Nivelamento from './pages/Nivelamento';
 import Login from './pages/Login';
+import AtivacaoConta from './pages/AtivacaoConta';
 
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -27,16 +28,18 @@ const App = () => {
 const AppContent = () => {
   const location = useLocation();
   const isLoginPage = location.pathname === "/Login";
+  const isAtivacaoContaPage = location.pathname === "/AtivacaoConta";
 
   return (
     <>
-      {!isLoginPage && <Header />}
+      {!isLoginPage && !isAtivacaoContaPage && <Header />}
       
       <Routes>
         <Route path="/" element={<Navigate to="/Login" replace />} />
         <Route path="/PrimeiroAcesso" element={<PrimeiroAcesso />} />
         <Route path="/TelaInicial" element={<TelaInicial />} />
         <Route path="/Login" element={<Login />} />
+        <Route path="/AtivacaoConta" element={<AtivacaoConta />} />
         <Route path="/Configuracoes" element={<Configuracoes />} />
         <Route path="/Conquistas" element={<Conquistas />} />
         <Route path="/DescubraEvento" element={<DescubraEvento />} />
@@ -44,7 +47,7 @@ const AppContent = () => {
         <Route path="/Nivelamento" element={<Nivelamento />} />
       </Routes>
 
-      {!isLoginPage && <Footer />}
+      {!isLoginPage && !isAtivacaoContaPage && <Footer />}
     </>
   );
 }

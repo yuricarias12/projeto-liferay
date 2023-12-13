@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 
 import Login from './pages/Login';
+import AtivacaoConta from './pages/AtivacaoConta';
 import PrimeiroAcesso from './pages/PrimeiroAcesso';
 import TelaInicial from './pages/TelaInicial';
 import Configuracoes from './pages/Configuracoes';
@@ -21,6 +22,7 @@ const App = () => {
             
             <Route path="/" element={<Navigate to="/Login" replace />}/>
             <Route path="/Login" element={<Login />} />
+            <Route path="/AtivacaoConta" element={<AtivacaoConta />} />
             <Route path="/PrimeiroAcesso" element={<PrimeiroAcesso />} />
             <Route path="/TelaInicial" element={<TelaInicial />} />
             <Route path="/Configuracoes" element={<Configuracoes />} />

@@ -5,6 +5,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 
 import PrimeiroAcesso from './pages/PrimeiroAcesso';
+import TelaInicial from './pages/TelaInicial';
 import Configuracoes from './pages/Configuracoes';
 import Conquistas from './pages/Conquistas';
 import DescubraEvento from './pages/DescubraEvento';
@@ -34,6 +35,7 @@ const AppContent = () => {
       <Routes>
         <Route path="/" element={<Navigate to="/Login" replace />} />
         <Route path="/PrimeiroAcesso" element={<PrimeiroAcesso />} />
+        <Route path="/TelaInicial" element={<TelaInicial />} />
         <Route path="/Login" element={<Login />} />
         <Route path="/Configuracoes" element={<Configuracoes />} />
         <Route path="/Conquistas" element={<Conquistas />} />

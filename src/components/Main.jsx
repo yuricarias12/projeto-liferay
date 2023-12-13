@@ -439,6 +439,123 @@ label img {
 /* FIM CSS PÁGINA DE CONQUISTAS */
 
 
+/* INICIO CSS TELA INICIAL */
+
+/* TEMAS */
+
+#text {
+    margin-top: 20px;
+    margin-left: 10px;;
+}
+
+.temas{
+   
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    justify-content: center;
+    margin-left: 16rem;
+    margin-right: 20rem;
+    
+}
+
+.tema-box{
+    padding-top: 1rem;
+    
+}
+
+.tema-img{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1.5rem;
+}
+
+.tema-img img {
+    max-width: 105px;
+    max-height: 105px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.tema-text{
+    text-align: center;
+    color: #4C576C;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.28px;
+    cursor: pointer;
+}
+
+/* EVENTOS */
+
+.eventos{
+    display: grid;
+    padding-left: 3%;
+    padding-top: 2rem;
+    grid-gap: 1rem;
+    row-gap: 2rem;
+    grid-template-columns: repeat(4, 20%);
+    justify-content: center;
+    gap: 50px;
+}
+
+.eventos-box{
+    padding-bottom: 0.8rem;
+    background-color: #ffffff;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+}
+
+.eventos-box-img img {
+
+       width: 100%;
+}
+
+.eventos-box-text {
+  margin-top: 15px;
+}
+
+.data {
+    color: #0B63CE;
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.24px;
+    text-align: center;
+}
+
+.apresentacao {
+    color: #191F28;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.28px;
+    padding-top: 2px;
+    text-align: center ;
+}
+
+.palestrante {
+    color: #4C576C;
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.24px;
+    text-align:center;
+    margin-top: 1rem;
+}
+
+/* FIM CSS TELA INICIAL */
+
+
 
 
 @media only screen and (max-width: 600px) {

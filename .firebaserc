@@ -2,7 +2,7 @@
   "projects": {
     "default": "liferay-fdd75",
     "PrimeiroAcesso": "liferay-82bd4",
-    "yes": "liferay-fdd75"
+    "yes": "liferay-24b8c"
   },
   "targets": {},
   "etags": {}

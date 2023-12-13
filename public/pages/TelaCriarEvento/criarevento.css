@@ -293,7 +293,7 @@ ul {
 /*Calendário*/
 .conteudo{
     position: absolute;
-    left: 45%;
+    left: 40%;
     margin: 0 0 0 -500px;
     width: 30%;
     margin-top: 120px;
@@ -482,7 +482,7 @@ cursor: pointer;
 
 .div-btn-criar{
     position: absolute;
-    left: 45%;
+    left: 40%;
     margin-top: 700px;
     margin-left: 300px;
 

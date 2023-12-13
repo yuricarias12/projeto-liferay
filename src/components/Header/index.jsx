@@ -61,13 +61,12 @@ function Header() {
     <AreaHeader>
       <nav className="nav-bar">
         <div className="logo-img-search-box">
-          <a
+          <Link to="/TelaInicial"
             className="liferay-img"
-            href="./pages/TelaInicial/TelaInicial.html"
             onClick={handleLogoLiferayClick}
           >
             <img src="../../../liferay.png" alt="Liferay" />
-          </a>
+          </Link>
 
           <div className="search-box">
             <a href="#" className="search-btn">
@@ -85,13 +84,12 @@ function Header() {
 
         <div className="nav-items-btn-user-img">
           <div className="nav-item">
-            <a
-              href="./pages/TelaInicial/TelaInicial.html"
+            <Link to="/TelaInicial"
               className="nav-link"
               onClick={(event) => handleLinkClick(event, "./pages/TelaInicial/TelaInicial.html")}
             >
               Descubra um Evento
-            </a>
+            </Link>
           </div>
 
           <div className="nav-item">

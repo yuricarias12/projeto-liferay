@@ -120,7 +120,7 @@ const Nivelamento = () => {
           </button>
         </Link>
 
-        <a href="./pages/TelaInicial/TelaInicial.html">
+        <Link to="/TelaInicial">
           <button
             onClick={handleFinalizarClick}
             type="button"
@@ -129,7 +129,7 @@ const Nivelamento = () => {
           >
             Finalizar <img src="../../../finish.png" alt="V" />{" "}
           </button>
-        </a>
+        </Link>
       </div>
     </ContainerPage>
   );

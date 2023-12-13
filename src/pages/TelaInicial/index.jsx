@@ -50,11 +50,11 @@ const Page = () => {
                     </div>
                 </div>
             </div>
-
+        
             <h1 id="text">Próximos Eventos:</h1>
             <div className="eventos">
                 <div className="eventos-box">
-                    <a href="../TelaInscricaoEventos/index.html" className="evento-link">
+                    <a href="./pages/TelaInscricaoEventos/index.html" id="evento-link">
                         <div className="eventos-box-img">
                             <img src="../../../evento1.png" alt="evento1" />
                         </div>

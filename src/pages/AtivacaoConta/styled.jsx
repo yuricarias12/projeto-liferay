@@ -86,6 +86,7 @@ p {
 
 .content-login {
     text-align: center;
+    margin-top: 25px;
 }
 
 .box-login{
@@ -111,6 +112,14 @@ h2 {
     border-radius: 5px;
 }
 
+.wrapper.fadeInDown {
+    width: 25%;
+    height: 400px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+}
+
 .botao-submit {
     display: flex;
     width: 265px;
@@ -121,7 +130,7 @@ h2 {
     border-radius: 8px;
     border: 2px solid #D1D5DB;
     background: #0B63CE;
-    margin-top: 5px;
+    margin-top: 25px;
     cursor: pointer;
 }
 
@@ -140,7 +149,7 @@ h2 {
 }
 
 .box-lembrar-senha {
-    margin-top: 5px;
+    margin-top: 15px;
 }
 
 .link {
@@ -185,13 +194,26 @@ h2 {
             margin-bottom: 180px;
         }
     }
-    @media (max-width: 360px) {
+    @media (max-width: 500px) {
         .logotipo {
             width: 200px;
             height: 61.806px;
         }
         .wrapper {
             margin-bottom: 100px;
+        }
+
+        .wrapper.fadeInDown {
+            width: 100%;
+            height: 400px;
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .cont-img-logo {
+
+            margin-left: 15px;
         }
         
     }

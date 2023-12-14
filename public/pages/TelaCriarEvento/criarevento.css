@@ -166,14 +166,13 @@ ul {
 /*Criação de Eventos - Editar Imagem*/
 .create-events{
     color: #191F28;
-    font-family:'Inter', sans-serif;
     font-size: 30px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
     letter-spacing: 0.4px;
     margin-top: 59px;
-    margin-left: 199px;
+    margin-left: 300px;
 }
 
 .wh-100 {
@@ -243,7 +242,7 @@ ul {
 .subtitle{
     width: 287px;
     margin-top: 59px;
-    margin-left: -15px;
+    margin-left: -50px;
     text-align: left;
     color: var(--Gray-3, #828282);
     text-align: center;
@@ -271,11 +270,9 @@ ul {
 }
 
 .event-name, .event-description {
-    font-family: Inter;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-
     box-sizing: border-box;
     display: flex;
     width: 427px;

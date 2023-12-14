@@ -38,6 +38,7 @@ h1 {
 .logo-img-search-box {
     display: flex;
     gap: 25px;
+    
 
 }
 
@@ -76,6 +77,7 @@ h1 {
    display: flex;
    justify-content: space-between;
    align-items: center;
+   cursor: pointer;
 
 }
 
